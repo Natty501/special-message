@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Special Message</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 450px;
+    }
+    h1 {
+      color: #e63946;
+    }
+    .message {
+      font-size: 18px;
+      margin-top: 15px;
+      white-space: pre-wrap;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Loe, Rebisco! 😊</h1>
+    <p class="message" id="msg"></p>
+  </div>
+
+  <script>
+    const text = "This is a special message just for you 💌\nGood morning! I just want you to know that no matter how busy or tiring the days get, I'll always be here as ur kakampi. Whether it's small things or big challenges, you can count on me to stand by ur side. I might not always have the perfect word, pero you can trust that my support is genuine. Whatever comes your way, your're not alone, I'll be your kakampi in everything. ✨";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("msg").textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 70); // typing speed
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
